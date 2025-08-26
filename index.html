@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p id="demo"></p>
+    please enter your score:
+    <input type="number" id="scr" />
+
+    <button onclick="generat()">Grade</button>
+
+    <script>
+      let inpt = document.getElementById("scr");
+      let demo = document.getElementById("demo");
+      let txt = "";
+
+      function generat() {
+        if (inpt.value >= 80) {
+          txt = "your grade is: <b> A </b>";
+        } else if (inpt.value >= 60) {
+          txt = "your grade is: <b> B </b>";
+        } else if (inpt.value >= 40) {
+          txt = "your grade is: <b> C </b>";
+        } else if (inpt.value >= 20) {
+          txt = "your grade is: <b> D </b>";
+        } else {
+          txt = "none";
+        }
+        demo.innerHTML = txt;
+      }
+    </script>
+  </body>
+</html>
